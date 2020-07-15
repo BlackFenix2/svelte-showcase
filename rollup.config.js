@@ -10,7 +10,6 @@ import autoPreprocess from 'svelte-preprocess';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
-const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
@@ -19,7 +18,7 @@ const onwarn = (warning, onwarn) =>
 
 export default {
   client: {
-    input: config.client.input(),
+    input: config.client.input().replace(/\.js$/, '.ts'),
     output: config.client.output(),
     plugins: [
       replace({
@@ -50,7 +49,7 @@ export default {
   },
 
   server: {
-    input: config.server.input(),
+    input: config.server.input().server.replace(/\.js$/, '.ts'),
     output: config.server.output(),
     plugins: [
       replace({
