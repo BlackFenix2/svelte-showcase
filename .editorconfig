@@ -1,0 +1,15 @@
+root = true
+
+# all files
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+
+# settings for JavaScript/Typescript/JSON/MD/CSS/SVELTE files
+[*.{js,jsx,ts,tsx,json,md,css,svelte}]
+charset = utf-8
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+quote_type = single
