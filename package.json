@@ -13,7 +13,8 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^1.0.1"
+    "sirv": "^1.0.1",
+    "sveltestrap": "^3.5.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
@@ -30,7 +31,6 @@
     "svelte": "^3.0.0",
     "svelte-check": "^0.1.55",
     "svelte-preprocess": "^4.0.8",
-    "sveltestrap": "C:\\Users\\Asus\\Desktop\\git-test\\sveltestrap",
     "tslib": "^2.0.0",
     "typescript": "^3.9.6"
   }
