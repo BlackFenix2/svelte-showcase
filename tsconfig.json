@@ -7,7 +7,7 @@
     "typeRoots": ["typings"],
     "baseUrl": ".",
     "paths": {
-      "sveltestrap": ["src/index"]
+      "src/*": ["src/*"]
     }
   }
 }
