@@ -439,6 +439,11 @@ cli-truncate@^0.2.1:
     slice-ansi "0.0.4"
     string-width "^1.0.1"
 
+clsx@^1.0.4:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -2125,9 +2130,12 @@ svelte@3.24.0, svelte@^3.0.0:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.24.0.tgz#6565a42c9705796fa66c6abb4fedc09f4323a4a8"
   integrity sha512-VFXom6EP2DK83kxy4ZlBbaZklSbZIrpNH3oNXlPYHJUuW4q1OuAr3ZoYbfIVTVYPDgrI7Yq0gQcOhDlAtO4qfw==
 
-"sveltestrap@file:../../../../Desktop/git-test/sveltestrap":
+sveltestrap@^4.5.0:
   version "3.5.0"
+  resolved "https://registry.yarnpkg.com/sveltestrap/-/sveltestrap-3.5.0.tgz#6ebf2ce4bf55e72b90095921feb57d8f1393eee8"
+  integrity sha512-5fGj3W/f2hPQ3BhYLOG9WHsXacokAQ7k2x3msBeVk0sVizXdWRMp57ase8UnMncuKFzdcUMX3odmhoCWXubayg==
   dependencies:
+    clsx "^1.0.4"
     lodash.isobject "^3.0.2"
     lodash.tonumber "^4.0.3"
 
