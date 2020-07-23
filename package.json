@@ -5,7 +5,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
+    "build": "sapper build",
     "export": "sapper export",
+    "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"
@@ -13,8 +15,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^1.0.1",
-    "sveltestrap": "^3.5.0"
+    "sirv": "^0.4.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
@@ -32,6 +33,7 @@
     "svelte-check": "^0.1.55",
     "svelte-preprocess": "^4.0.8",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "sveltestrap": "^4.5.0"
   }
 }
