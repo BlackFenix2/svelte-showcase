@@ -61,7 +61,6 @@ export default {
         dev,
         preprocess: autoPreprocess(),
       }),
-      typescript(),
       resolve({
         dedupe: ['svelte'],
       }),

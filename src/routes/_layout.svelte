@@ -1,22 +1,15 @@
 <script lang="typescript">
-  import Nav from '../components/Nav.svelte';
-
-  export let segment;
+  import { Header, Body, Footer } from '../layout';
 </script>
 
-<style>
-  main {
-    position: relative;
-    max-width: 56em;
-    background-color: white;
-    padding: 2em;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-</style>
+<svelte:head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+</svelte:head>
 
-<Nav {segment} />
-
-<main>
+<Header />
+<Body>
   <slot />
-</main>
+</Body>
+<Footer />
