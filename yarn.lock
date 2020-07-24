@@ -2126,7 +2126,11 @@ svelte@3.24.0, svelte@^3.0.0:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.24.0.tgz#6565a42c9705796fa66c6abb4fedc09f4323a4a8"
   integrity sha512-VFXom6EP2DK83kxy4ZlBbaZklSbZIrpNH3oNXlPYHJUuW4q1OuAr3ZoYbfIVTVYPDgrI7Yq0gQcOhDlAtO4qfw==
 
+<<<<<<< HEAD
 sveltestrap@^3.5.0:
+=======
+sveltestrap@^4.5.0:
+>>>>>>> c0b4d2f20e03d64955356b642fab753d1fe1a328
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/sveltestrap/-/sveltestrap-3.5.0.tgz#6ebf2ce4bf55e72b90095921feb57d8f1393eee8"
   integrity sha512-5fGj3W/f2hPQ3BhYLOG9WHsXacokAQ7k2x3msBeVk0sVizXdWRMp57ase8UnMncuKFzdcUMX3odmhoCWXubayg==
