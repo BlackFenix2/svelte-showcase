@@ -7,6 +7,8 @@ import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import typescript from '@rollup/plugin-typescript';
 import autoPreprocess from 'svelte-preprocess';
+import alias from '@rollup/plugin-alias';
+import path from 'path';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -21,6 +23,10 @@ export default {
     input: config.client.input().replace(/\.js$/, '.ts'),
     output: config.client.output(),
     plugins: [
+      alias({
+        resolve: ['.ts', '.svelte'],
+        entries: [{ find: 'src', replacement: path.resolve(__dirname, 'src') }],
+      }),
       replace({
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -52,6 +58,10 @@ export default {
     input: config.server.input().server.replace(/\.js$/, '.ts'),
     output: config.server.output(),
     plugins: [
+      alias({
+        resolve: ['.ts', '.svelte'],
+        entries: [{ find: 'src', replacement: path.resolve(__dirname, 'src') }],
+      }),
       replace({
         'process.browser': false,
         'process.env.NODE_ENV': JSON.stringify(mode),
