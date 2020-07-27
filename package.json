@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
-    "export": "sapper export",
     "update": "yarn upgrade-interactive --latest",
+    "export": "sapper export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
@@ -31,9 +31,9 @@
     "rollup-plugin-terser": "^6.1.0",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",
-    "svelte-check": "^0.1.57",
+    "svelte-check": "^0.1.58",
     "svelte-preprocess": "^4.0.8",
-    "sveltestrap": "^3.7.1",
+    "sveltestrap": "^3.7.2",
     "tslib": "^2.0.0",
     "typescript": "^3.9.6"
   }
