@@ -156,9 +156,9 @@
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
 "@types/node@*":
-  version "14.0.24"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.24.tgz#b0f86f58564fa02a28b68f8b55d4cdec42e3b9d6"
-  integrity sha512-btt/oNOiDWcSuI721MdL8VQGnjsKjlTMdrKyTcLCKeQp/n4AAMFJ961wMbp+09y8WuGPClDEv07RIItdXKIXAA==
+  version "14.0.26"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.26.tgz#22a3b8a46510da8944b67bfc27df02c34a35331c"
+  integrity sha512-W+fpe5s91FBGE0pEa0lnqGLL4USgpLgs4nokw16SrBBco/gQxuua7KnArSEOd5iaMqbbSHV10vUDkJYJJqpXKA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -433,11 +433,6 @@ cli-truncate@^0.2.1:
   dependencies:
     slice-ansi "0.0.4"
     string-width "^1.0.1"
-
-clsx@^1.0.4:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
-  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
 
 code-point-at@^1.0.0:
   version "1.1.0"
@@ -1544,9 +1539,9 @@ parse-json@^4.0.0:
     json-parse-better-errors "^1.0.1"
 
 parse-json@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-5.0.0.tgz#73e5114c986d143efa3712d4ea24db9a4266f60f"
-  integrity sha512-OOY5b7PAEFV0E2Fir1KOkxchnZNCdowAJgQ5NuxjpBKTRP3pQhwkrkxqQjeoKJ+fO7bCpmIZaogI4eZGDMEGOw==
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-5.0.1.tgz#7cfe35c1ccd641bce3981467e6c2ece61b3b3878"
+  integrity sha512-ztoZ4/DYeXQq4E21v169sC8qWINGpcosGv9XhTDvg9/hWvx/zrFkc9BiWxR58OJLHGk28j5BL0SDLeV2WmFZlQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     error-ex "^1.3.1"
@@ -2056,10 +2051,10 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-svelte-check@^0.1.55:
-  version "0.1.55"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-0.1.55.tgz#7e5261123302db4d6ed54a4ab2ed3f4d3cc9fd82"
-  integrity sha512-jdTmpMe1WLQyciNLZ3/8ApwPmpbKbF0RLu480GDapLp+eAjtVMY1j1afWSUgkc6aeTEvoMA29MnICz+rI6mrYA==
+svelte-check@^0.1.57:
+  version "0.1.57"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-0.1.57.tgz#153afca88d97f7a02b266a8c25f5bc9b879354ef"
+  integrity sha512-0rUlHCYQOph0dhKsNi3lBQdFoSmjheV7UBdvJUMhedh0V2plj44QMfBAny+rcnss1wKyvvnMnJshrTjFEbO6Ig==
   dependencies:
     chalk "^4.0.0"
     glob "^7.1.6"
@@ -2071,9 +2066,9 @@ svelte-check@^0.1.55:
     vscode-uri "2.1.1"
 
 svelte-language-server@*:
-  version "0.10.74"
-  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.74.tgz#3752415043a119c7ef0437c1f35ea4e7c941cc26"
-  integrity sha512-IeBP0B0PLP4bahxHeI1/uK+hkAlanbuEYOVRp2RRuwldh0Z4lcMrVmfvmKEMy2kXA4Cvsbw4Cc56D2gU4vAoTw==
+  version "0.10.76"
+  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.76.tgz#36cc64b901706c7739f0aad79dc352e0692dbff2"
+  integrity sha512-XGgFFunlM+s+F+8Ny6vxzY2Lo0+mKehCNLlj/cektoAkyrFKnQCmX2d4uQTK1ftM6WHyRUSxmPcTSQzJFrmEiw==
   dependencies:
     cosmiconfig "^6.0.0"
     estree-walker "^2.0.1"
@@ -2114,9 +2109,9 @@ svelte-preprocess@~3.9.11:
     strip-indent "^3.0.0"
 
 svelte2tsx@*:
-  version "0.1.60"
-  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.60.tgz#4041e67186280f00b9af8155183d03f9797bfff5"
-  integrity sha512-T69qVkeMybBSFKc5/0pq+Au498bFYPMiiaIatKOWSL7blg5iEdDzZHFDKMDTuefP3RdctbQIP8HfIgmEfV2TCg==
+  version "0.1.62"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.62.tgz#d7d2e9322b2fa6afe400f9a340107664b1cad24c"
+  integrity sha512-a7cDw72L5NjCwbK/j3PCvDlPdXgp5RNgAoA9hbuklbu7L/QzuUAuv+PdEOtbSiObKVjNlqps0VajEFzgvrHdXg==
   dependencies:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
@@ -2126,16 +2121,11 @@ svelte@3.24.0, svelte@^3.0.0:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.24.0.tgz#6565a42c9705796fa66c6abb4fedc09f4323a4a8"
   integrity sha512-VFXom6EP2DK83kxy4ZlBbaZklSbZIrpNH3oNXlPYHJUuW4q1OuAr3ZoYbfIVTVYPDgrI7Yq0gQcOhDlAtO4qfw==
 
-<<<<<<< HEAD
-sveltestrap@^3.5.0:
-=======
-sveltestrap@^4.5.0:
->>>>>>> c0b4d2f20e03d64955356b642fab753d1fe1a328
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/sveltestrap/-/sveltestrap-3.5.0.tgz#6ebf2ce4bf55e72b90095921feb57d8f1393eee8"
-  integrity sha512-5fGj3W/f2hPQ3BhYLOG9WHsXacokAQ7k2x3msBeVk0sVizXdWRMp57ase8UnMncuKFzdcUMX3odmhoCWXubayg==
+sveltestrap@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/sveltestrap/-/sveltestrap-3.7.1.tgz#a9550ac2b1cf245219d369d4c07e271cee229d60"
+  integrity sha512-cWIUBPmC5w5JdErVTW9CTDFWrYSwVjehtEQFvN+iwbVFODYm0GSM9dkeMx0F3t8ToSlKuGJ8oZ6JkwTpY7M8Bw==
   dependencies:
-    clsx "^1.0.4"
     lodash.isobject "^3.0.2"
     lodash.tonumber "^4.0.3"
 
