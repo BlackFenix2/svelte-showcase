@@ -7,18 +7,18 @@ const ASSETS = `cache${timestamp}`;
 const to_cache = shell.concat(files);
 const cached = new Set(to_cache);
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event: any) => {
   event.waitUntil(
     caches
       .open(ASSETS)
       .then((cache) => cache.addAll(to_cache))
       .then(() => {
-        self.skipWaiting();
+        (self as any).skipWaiting();
       })
   );
 });
 
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event: any) => {
   event.waitUntil(
     caches.keys().then(async (keys) => {
       // delete old caches
@@ -26,12 +26,12 @@ self.addEventListener('activate', (event) => {
         if (key !== ASSETS) await caches.delete(key);
       }
 
-      self.clients.claim();
+      (self as any).clients.claim();
     })
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event: any) => {
   if (event.request.method !== 'GET' || event.request.headers.has('range'))
     return;
 

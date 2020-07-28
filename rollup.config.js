@@ -18,9 +18,15 @@ const onwarn = (warning, onwarn) =>
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
+const extensions = ['.mjs', '.js', '.json', '.node', '.ts', '.svelte'];
+
+const useTypescriptEntry = (string) => {
+  return string.replace(/\.js$/, '.ts');
+};
+
 export default {
   client: {
-    input: config.client.input().replace(/\.js$/, '.ts'),
+    input: useTypescriptEntry(config.client.input()),
     output: config.client.output(),
     plugins: [
       alias({
@@ -40,6 +46,7 @@ export default {
       resolve({
         browser: true,
         dedupe: ['svelte'],
+        extensions: extensions,
       }),
       commonjs(),
       typescript(),
@@ -55,7 +62,7 @@ export default {
   },
 
   server: {
-    input: config.server.input().server.replace(/\.js$/, '.ts'),
+    input: useTypescriptEntry(config.server.input().server),
     output: config.server.output(),
     plugins: [
       alias({
@@ -73,6 +80,7 @@ export default {
       }),
       resolve({
         dedupe: ['svelte'],
+        extensions: extensions,
       }),
       commonjs(),
       typescript(),
@@ -87,7 +95,7 @@ export default {
   },
 
   serviceworker: {
-    input: config.serviceworker.input(),
+    input: useTypescriptEntry(config.serviceworker.input()),
     output: config.serviceworker.output(),
     plugins: [
       resolve(),
@@ -96,6 +104,8 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       commonjs(),
+      typescript(),
+
       !dev && terser(),
     ],
 
