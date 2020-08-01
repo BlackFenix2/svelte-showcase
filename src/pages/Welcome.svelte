@@ -74,7 +74,7 @@
 
     <p>
       On
-      <a href="https://cameo.com">cameo.com</a>
+      <a href="https://cameo.com" target="_blank">cameo.com</a>
       , you can buy personalised video clips from everyone from Lindsay Lohan to
       Ice T.
     </p>
