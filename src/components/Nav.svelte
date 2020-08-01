@@ -13,7 +13,7 @@
     DropdownItem,
   } from 'sveltestrap';
 
-  let isOpen = false;
+  let isOpen = true;
 
   const handleUpdate = (event) => {
     isOpen = event.detail.isOpen;
@@ -24,10 +24,11 @@
 
 </style>
 
-<div />
 <Navbar color="light" light expand="md">
+
   <NavbarBrand href="/">svelte-showcase</NavbarBrand>
   <NavbarToggler on:click={() => (isOpen = !isOpen)} />
+
   <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
     <Nav navbar>
 
