@@ -68,7 +68,7 @@
 
   <Container
     fluid
-    class="bg-dark text-white d-flex flex-column justify-content-center">
+    class="bg-dark text-white flex-grow-1 d-flex align-items-center h-100">
     {#if gameStarted}
       <Game {selection} on:restart={restart} />
     {:else}

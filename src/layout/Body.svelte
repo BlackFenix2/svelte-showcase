@@ -8,6 +8,7 @@
     flex: 1;
     /* allows child container to utilize the full width of this element */
     display: flex;
+    flex-direction: column;
   }
 </style>
 

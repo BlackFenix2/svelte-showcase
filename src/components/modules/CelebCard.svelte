@@ -27,7 +27,7 @@
   .card-outer {
     height: 100%;
     width: 100%;
-    padding: 0 0 100% 0;
+    padding: 0 0 50% 0;
     position: relative;
   }
 
@@ -89,6 +89,7 @@
   @media (min-width: 640px) {
     .card-outer {
       height: 0;
+      padding: 0 0 100% 0;
     }
   }
 </style>
