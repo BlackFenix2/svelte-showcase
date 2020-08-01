@@ -7,6 +7,10 @@
     NavbarBrand,
     NavItem,
     NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
   } from 'sveltestrap';
 
   let isOpen = false;
@@ -21,7 +25,7 @@
 </style>
 
 <div />
-<Navbar color="light" expand="md">
+<Navbar color="light" light expand="md">
   <NavbarBrand href="/">svelte-showcase</NavbarBrand>
   <NavbarToggler on:click={() => (isOpen = !isOpen)} />
   <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
@@ -36,6 +40,12 @@
       <NavItem>
         <NavLink disabled href="#">Disabled Link</NavLink>
       </NavItem>
+      <UncontrolledDropdown nav inNavbar>
+        <DropdownToggle nav caret>Games</DropdownToggle>
+        <DropdownMenu right>
+          <DropdownItem href="games/cameoparison">Cameoparison</DropdownItem>
+        </DropdownMenu>
+      </UncontrolledDropdown>
     </Nav>
   </Collapse>
 </Navbar>

@@ -16,6 +16,7 @@ const dev = mode === 'development';
 const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
+  warning.code === 'THIS_IS_UNDEFINED' ||
   onwarn(warning);
 
 const extensions = ['.mjs', '.js', '.json', '.node', '.ts', '.svelte'];

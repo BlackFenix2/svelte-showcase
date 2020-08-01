@@ -1,5 +1,6 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import { Container } from 'sveltestrap';
 </script>
 
 <style>
@@ -42,15 +43,19 @@
   <title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<template>
+  <Container fluid>
+    <h1>Great success!</h1>
 
-<figure in:fade>
-  <img alt="Success Kid" src="successkid.jpg" />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
+    <figure in:fade>
+      <img alt="Success Kid" src="successkid.jpg" />
+      <figcaption>Have fun with Sapper!</figcaption>
+    </figure>
 
-<p>
-  <strong>
-    Try editing this file (src/routes/index.svelte) to test live reloading.
-  </strong>
-</p>
+    <p>
+      <strong>
+        Try editing this file (src/routes/index.svelte) to test live reloading.
+      </strong>
+    </p>
+  </Container>
+</template>

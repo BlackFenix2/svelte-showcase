@@ -2,11 +2,15 @@
   import { Container, Row, Col } from 'sveltestrap';
 </script>
 
+<style>
+
+</style>
+
 <footer>
   <Container fluid class="bg-light text-dark">
     <Row>
       <Col xs="auto">
-        <p class="">I am the footer</p>
+        <p>I am the footer</p>
       </Col>
     </Row>
 
