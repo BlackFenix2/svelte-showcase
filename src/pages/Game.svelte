@@ -11,20 +11,6 @@
 
   const dispatch = createEventDispatcher();
 
-  function findCheater(e: MouseEvent) {
-    e.preventDefault();
-    cameoparisonStore.cheatingDetected();
-    return false;
-  }
-
-  onMount(() => {
-    window.addEventListener('contextmenu', findCheater, true);
-  });
-
-  onDestroy(() => {
-    window.removeEventListener('contextmenu', findCheater, true);
-  });
-
   const [send, receive] = crossfade({
     duration: 300,
     easing: eases.cubicInOut,
@@ -38,6 +24,13 @@
   let inputLocked = false;
 
   $: score = results.filter((x) => x === 'right').length;
+
+  const findCheater = (e: Event) => {
+    e.preventDefault();
+    console.log('cheating caught from event: ', e.type);
+    cameoparisonStore.cheatingDetected();
+    return false;
+  };
 
   const pickMessage = (p) => {
     if (p < 0.5) return pickRandom(['Ouch', 'Must try harder']);
@@ -181,6 +174,8 @@
     }
   }
 </style>
+
+<svelte:window on:contextmenu={findCheater} on:blur={findCheater} />
 
 <template>
   <div
