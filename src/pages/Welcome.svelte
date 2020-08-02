@@ -65,7 +65,9 @@
 </style>
 
 <template>
-  <Container class="d-flex flex-column align-items-center h-100 mh-100">
+  <Container
+    class="d-flex flex-grow-1 flex-column align-items-center
+    justify-content-center">
     <h1 class="text-center">
       Cameop
       <span class="logo">a</span>
@@ -95,6 +97,6 @@
       {/each}
     </div>
 
-    <p class="mt-auto">Inspired by https://cameoparison.netlify.app/</p>
+    <p>Inspired by https://cameoparison.netlify.app/</p>
   </Container>
 </template>

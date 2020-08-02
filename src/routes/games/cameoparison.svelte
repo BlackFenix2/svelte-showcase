@@ -3,22 +3,23 @@
   import Game from 'src/pages/Game.svelte';
   import { onMount } from 'svelte';
   import { select } from 'src/services/cameoparisonService';
-  import { Container } from 'sveltestrap';
+  import { Container, Button } from 'sveltestrap';
   import { loadImage } from 'src/utils';
 
+  import { cameoparisonStore } from 'src/state/cameoparison';
+  import CaughtCheating from 'src/pages/CaughtCheating.svelte';
   let celebsPromise;
   let selection;
-  let gameStarted = false;
 
   const restart = () => {
-    gameStarted = false;
+    cameoparisonStore.reset();
   };
   const start = async (e) => {
     const { celebs, lookup } = await celebsPromise;
 
     selection = select(celebs, lookup, e.detail.category.slug);
 
-    gameStarted = true;
+    cameoparisonStore.startGame();
   };
 
   const loadCelebs = async () => {
@@ -66,11 +67,11 @@
 </svelte:head>
 <template>
 
-  <Container
-    fluid
-    class="bg-dark text-white flex-grow-1 d-flex align-items-center h-100">
-    {#if gameStarted}
-      <Game {selection} on:restart={restart} />
+  <Container fluid class="bg-dark text-white flex-grow-1 d-flex flex-column">
+    {#if $cameoparisonStore.gameStarted && !$cameoparisonStore.cheatingDetected}
+      <Game {selection} />
+    {:else if $cameoparisonStore.cheatingDetected}
+      <CaughtCheating />
     {:else}
       <Welcome on:select={start} />
     {/if}

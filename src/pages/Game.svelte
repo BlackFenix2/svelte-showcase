@@ -2,13 +2,28 @@
   import { Container, Button } from 'sveltestrap';
   import CelebCard from 'src/components/modules/CelebCard.svelte';
   import { sleep, pickRandom, loadImage } from 'src/utils';
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, onMount, onDestroy } from 'svelte';
   import { fly, scale, crossfade } from 'svelte/transition';
   import * as eases from 'svelte/easing';
+  import { cameoparisonStore } from 'src/state/cameoparison';
 
   export let selection: object[] = [];
 
   const dispatch = createEventDispatcher();
+
+  function findCheater(e: MouseEvent) {
+    e.preventDefault();
+    cameoparisonStore.cheatingDetected();
+    return false;
+  }
+
+  onMount(() => {
+    window.addEventListener('contextmenu', findCheater, true);
+  });
+
+  onDestroy(() => {
+    window.removeEventListener('contextmenu', findCheater, true);
+  });
 
   const [send, receive] = crossfade({
     duration: 300,
@@ -179,7 +194,7 @@
           <Button
             color="primary"
             on:click={() => {
-              dispatch('restart');
+              cameoparisonStore.reset();
             }}>
             Back to main screen
           </Button>
@@ -252,4 +267,5 @@
       {/each}
     </div>
   </div>
+
 </template>
