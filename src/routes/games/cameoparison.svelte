@@ -63,6 +63,9 @@
 
 <svelte:head>
   <meta name="description" content="The Cameo comparison game" />
+  <meta property="og:title" content="Cameoparison" />
+  <meta property="og:image" content="/images/capture.png" />
+  <meta property="og:description" content="The Cameo comparison game" />
   <title>Cameoparison</title>
 </svelte:head>
 <template>
