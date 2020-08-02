@@ -97,6 +97,13 @@
       {/each}
     </div>
 
-    <p>Inspired by https://cameoparison.netlify.app/</p>
+    <p>
+      Created from the frontendmasters workshop by
+      <a
+        href="https://github.com/Rich-Harris/cameoparison-starter"
+        target="_blank">
+        https://github.com/Rich-Harris/cameoparison-starter
+      </a>
+    </p>
   </Container>
 </template>
