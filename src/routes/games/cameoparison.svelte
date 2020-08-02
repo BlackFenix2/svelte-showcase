@@ -8,6 +8,8 @@
 
   import { cameoparisonStore } from 'src/state/cameoparison';
   import CaughtCheating from 'src/pages/CaughtCheating.svelte';
+
+  import SEO from 'src/routes/_seo.svelte';
   let celebsPromise;
   let selection;
 
@@ -61,20 +63,11 @@
 
 </style>
 
-<svelte:head>
-  <meta name="description" content="The Cameo comparison game" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="CameoParison" />
-  <meta property="og:description" content="The Cameo comparison game" />
+<SEO
+  title="CameoParison"
+  description="The Cameo comparison game"
+  imgSrc="https://raw.githubusercontent.com/BlackFenix2/svelte-showcase/master/static/images/Capture.PNG" />
 
-  <meta
-    property="og:image"
-    content="https://raw.githubusercontent.com/BlackFenix2/svelte-showcase/master/static/images/Capture.PNG" />
-  <meta property="og:image:width" content="1200" />
-
-  <meta property="og:image:height" content="630" />
-  <title>Cameoparison</title>
-</svelte:head>
 <template>
 
   <Container fluid class="bg-dark text-white flex-grow-1 d-flex flex-column">

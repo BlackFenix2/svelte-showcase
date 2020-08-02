@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import { Container } from 'sveltestrap';
+  import SEO from './_seo.svelte';
 </script>
 
 <style>
@@ -39,9 +40,7 @@
   }
 </style>
 
-<svelte:head>
-  <title>Sapper project template</title>
-</svelte:head>
+<SEO />
 
 <template>
   <Container fluid>

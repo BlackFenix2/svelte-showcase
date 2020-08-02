@@ -1,7 +1,7 @@
 <script lang="typescript">
   import { count } from 'src/state';
   import { Button, Container } from 'sveltestrap';
-
+  import SEO from './_seo.svelte';
   const test: number = 0;
   function add() {
     count.increment();
@@ -12,9 +12,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>About</title>
-</svelte:head>
+<SEO title="About" />
 
 <Container fluid>
   <h1>About this site</h1>

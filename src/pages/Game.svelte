@@ -35,6 +35,7 @@
   let lastResult: 'right' | 'wrong';
   let done = false;
   let ready = true;
+  let inputLocked = false;
 
   $: score = results.filter((x) => x === 'right').length;
 
@@ -60,18 +61,24 @@
 
   const results = Array(selection.length);
   const submit = async (a, b, sign) => {
-    lastResult = Math.sign(a.price - b.price) === sign ? 'right' : 'wrong';
-
-    await sleep(1500);
-
-    results[i] = lastResult;
-    lastResult = null;
-
-    await sleep(500);
-    if (i < selection.length - 1) {
-      i += 1;
+    //lock input once a selection was made, allow the animation to play.
+    if (inputLocked) {
     } else {
-      done = true;
+      inputLocked = true;
+      lastResult = Math.sign(a.price - b.price) === sign ? 'right' : 'wrong';
+
+      await sleep(1500);
+
+      results[i] = lastResult;
+      lastResult = null;
+
+      await sleep(500);
+      if (i < selection.length - 1) {
+        i += 1;
+      } else {
+        done = true;
+      }
+      inputLocked = false;
     }
   };
 </script>
