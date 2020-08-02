@@ -56,6 +56,7 @@
     celebsPromise = loadCelebs();
     loadImage('/icons/right.svg');
     loadImage('/icons/wrong.svg');
+    loadImage('/images/caught-cheating-1.jpg');
   });
 </script>
 
