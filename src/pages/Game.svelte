@@ -175,7 +175,7 @@
   }
 </style>
 
-<svelte:window on:contextmenu={findCheater} on:blur={findCheater} />
+<svelte:window on:blur={findCheater} />
 
 <template>
   <div

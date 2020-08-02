@@ -3,17 +3,12 @@
   import { createEventDispatcher, onMount, onDestroy } from 'svelte';
   import { scale } from 'svelte/transition';
   import { elasticOut } from 'svelte/easing';
-  import { cameoparisonStore } from 'src/state/cameoparison';
   export let celeb;
 
   export let showPrice;
   export let winner;
 
   const dispatch = createEventDispatcher();
-
-  const cheater = (e: MouseEvent) => {
-    cameoparisonStore.cheatingDetected();
-  };
 </script>
 
 <style lang="scss">
@@ -106,10 +101,7 @@
       on:click={() => dispatch('select')}>
       <div class="details">
         <h2>
-          <a
-            target="_blank"
-            href="https://cameo.com/{celeb.id}"
-            on:auxclick={cheater}>
+          <a target="_blank" href="https://cameo.com/{celeb.id}">
             {celeb.name}
           </a>
         </h2>
