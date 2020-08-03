@@ -13,12 +13,17 @@
     "lint": "lerna run lint",
     "test": "lerna run test",
     "build": "lerna run build",
+    "story": "start-storybook -c .storybook",
     "update": "yarn upgrade-interactive --latest",
     "assemble": "lerna run assemble"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@storybook/svelte": "^5.3.19",
+    "babel-loader": "^8.1.0",
     "lerna": "^3.20.2",
     "prettier": "^2.0.5",
+    "svelte-loader": "^2.13.6",
     "typescript": "^3.9.6"
   },
   "dependencies": {}
