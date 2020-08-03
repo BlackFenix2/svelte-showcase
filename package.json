@@ -26,5 +26,8 @@
     "svelte-loader": "^2.13.6",
     "typescript": "^3.9.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rollup-config-core": "*",
+    "tools": "*"
+  }
 }

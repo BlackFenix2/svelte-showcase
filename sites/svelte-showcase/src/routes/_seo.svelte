@@ -14,5 +14,5 @@
     <meta property="og:image" content={imgSrc} />
   {/if}
 
-  <title>Cameoparison</title>
+  <title>{title}</title>
 </svelte:head>
