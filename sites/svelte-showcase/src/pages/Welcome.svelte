@@ -65,45 +65,46 @@
 </style>
 
 <template>
-  <Container
-    class="d-flex flex-grow-1 flex-column align-items-center
-    justify-content-center">
-    <h1 class="text-center">
-      Cameop
-      <span class="logo">a</span>
-      rison
-    </h1>
+  <div class="contain">
+    <Container
+      class="d-flex flex-column align-items-center justify-content-center pt-5">
+      <h1 class="text-center">
+        Cameop
+        <span class="logo">a</span>
+        rison
+      </h1>
 
-    <p>
-      On
-      <a href="https://cameo.com" target="_blank">cameo.com</a>
-      , you can buy personalised video clips from everyone from Lindsay Lohan to
-      Ice T.
-    </p>
+      <p>
+        On
+        <a href="https://cameo.com" target="_blank">cameo.com</a>
+        , you can buy personalised video clips from everyone from Lindsay Lohan
+        to Ice T.
+      </p>
 
-    <p>But who commands the highest price?</p>
+      <p>But who commands the highest price?</p>
 
-    <p>pick a category to play the game:</p>
+      <p>pick a category to play the game:</p>
 
-    <div class="categories">
-      {#each categories as category}
-        <Button
-          class="m-1"
-          disabled={selected}
-          color="primary"
-          on:click={() => select(category)}>
-          {category.label}
-        </Button>
-      {/each}
-    </div>
+      <div class="categories">
+        {#each categories as category}
+          <Button
+            class="m-1"
+            disabled={selected}
+            color="primary"
+            on:click={() => select(category)}>
+            {category.label}
+          </Button>
+        {/each}
+      </div>
 
-    <p>
-      Created from the frontendmasters workshop by
-      <a
-        href="https://github.com/Rich-Harris/cameoparison-starter"
-        target="_blank">
-        https://github.com/Rich-Harris/cameoparison-starter
-      </a>
-    </p>
-  </Container>
+      <p>
+        Created from the frontendmasters workshop by
+        <a
+          href="https://github.com/Rich-Harris/cameoparison-starter"
+          target="_blank">
+          https://github.com/Rich-Harris/cameoparison-starter
+        </a>
+      </p>
+    </Container>
+  </div>
 </template>

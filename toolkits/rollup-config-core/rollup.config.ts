@@ -42,6 +42,7 @@ const rollupConfig: RollupConfig = {
         ],
       }),
       replace({
+        // @ts-ignore
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
@@ -49,6 +50,7 @@ const rollupConfig: RollupConfig = {
         dev,
         hydratable: true,
         emitCss: true,
+        // @ts-ignore
         preprocess: autoPreprocess(),
       }),
       resolve({
@@ -79,12 +81,14 @@ const rollupConfig: RollupConfig = {
         ],
       }),
       replace({
+        // @ts-ignore
         'process.browser': false,
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
         generate: 'ssr',
         dev,
+        // @ts-ignore
         preprocess: autoPreprocess(),
       }),
       resolve({
@@ -105,6 +109,7 @@ const rollupConfig: RollupConfig = {
     plugins: [
       resolve(),
       replace({
+        // @ts-ignore
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),

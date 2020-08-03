@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button } from 'sveltestrap';
+  import { Button, Container } from 'sveltestrap';
 
   import { cameoparisonStore } from 'src/state/cameoparison';
 
@@ -9,9 +9,8 @@
 </script>
 
 <template>
-  <div
-    class="d-flex flex-grow-1 flex-column align-items-center
-    justify-content-center">
+  <Container
+    class="d-flex flex-column align-items-center justify-content-center pt-5">
     <h2>
       Cheating Detected, you were caught cheating {$cameoparisonStore.cheatCount}
       time(s)
@@ -23,5 +22,5 @@
         alt="caught cheating meme" />
     </div>
     <Button class="mt-2" color="primary" on:click={restart}>Play fair?</Button>
-  </div>
+  </Container>
 </template>

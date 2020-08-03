@@ -71,7 +71,7 @@
 
 <template>
 
-  <Container fluid class="bg-dark text-white flex-grow-1 d-flex flex-column">
+  <Container fluid class="bg-dark text-white flex-grow-1">
     {#if $cameoparisonStore.gameStarted && !$cameoparisonStore.cheatingDetected}
       <Game {selection} />
     {:else if $cameoparisonStore.cheatingDetected}
