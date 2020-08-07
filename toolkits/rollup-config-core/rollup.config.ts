@@ -10,6 +10,8 @@ import alias from '@rollup/plugin-alias';
 import * as path from 'path';
 import type { RollupOptions } from 'rollup';
 
+// Utilize process.cwd() instead of __dirname to get the working directory of the calling script rather rhan this file
+
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 

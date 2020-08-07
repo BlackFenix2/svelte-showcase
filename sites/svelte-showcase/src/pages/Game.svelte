@@ -6,10 +6,7 @@
   import { fly, scale, crossfade } from 'svelte/transition';
   import * as eases from 'svelte/easing';
   import { cameoparisonStore } from 'src/state/cameoparison';
-
   export let selection: object[] = [];
-
-  const dispatch = createEventDispatcher();
 
   const [send, receive] = crossfade({
     duration: 300,

@@ -13,12 +13,17 @@
     "lint": "lerna run lint",
     "test": "lerna run test",
     "build": "lerna run build",
-    "story": "start-storybook -c .storybook",
+    "story": "start-storybook -p 9001",
     "update": "yarn upgrade-interactive --latest",
     "assemble": "lerna run assemble"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
+    "@storybook/addon-a11y": "^5.3.19",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/preset-typescript": "^3.0.0",
     "@storybook/svelte": "^5.3.19",
     "babel-loader": "^8.1.0",
     "lerna": "^3.20.2",
