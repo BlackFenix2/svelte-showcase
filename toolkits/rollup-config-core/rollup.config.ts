@@ -16,6 +16,7 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
 const onwarn = (warning, onwarn) =>
+  (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   warning.code === 'THIS_IS_UNDEFINED' ||
@@ -89,6 +90,7 @@ const rollupConfig: RollupConfig = {
       }),
       svelte({
         generate: 'ssr',
+        hydratable: true,
         dev,
         // @ts-ignore
         preprocess: autoPreprocess(),
