@@ -1,7 +1,6 @@
 <script lang="typescript">
   import 'bootstrap/dist/css/bootstrap.min.css';
   import { Header, Body, Footer } from '../layout';
-  import SEO from './_seo.svelte';
 </script>
 
 <style>
