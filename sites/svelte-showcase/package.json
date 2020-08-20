@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
-    "update": "yarn upgrade-interactive --latest",
     "export": "sapper export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
