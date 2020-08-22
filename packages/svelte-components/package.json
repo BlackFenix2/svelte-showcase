@@ -5,6 +5,9 @@
   "license": "MIT",
   "private": true,
   "main": "./src/index.ts",
+  "scripts": {
+    "lint": "stylelint **/*.svelte --fix && eslint . --ext .ts,.svelte"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "svelte-toolbox": "^0.6.1"
