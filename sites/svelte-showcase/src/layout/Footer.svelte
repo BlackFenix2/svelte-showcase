@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Container, Row, Col } from 'sveltestrap';
+  import { Container, Row, Col } from "sveltestrap";
 </script>
 
 <style>
   a {
-    color: inherit;
     margin-top: 10px;
+    color: inherit;
   }
 </style>
 

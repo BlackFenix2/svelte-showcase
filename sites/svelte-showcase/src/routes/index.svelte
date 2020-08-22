@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
-  import { Container } from 'sveltestrap';
-  import SEO from './_seo.svelte';
+  import { fade } from "svelte/transition";
+  import { Container } from "sveltestrap";
+  import SEO from "./_seo.svelte";
 </script>
 
 <style>
   h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
     margin: 0 0 0.5em 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   figure {

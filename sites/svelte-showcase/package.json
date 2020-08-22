@@ -5,6 +5,7 @@
   "license": "GPL-3.0-or-later",
   "version": "1.0.0",
   "scripts": {
+    "lint": "stylelint **/*.svelte --fix && eslint . --ext .ts,.svelte --fix",
     "dev": "sapper dev",
     "build": "sapper build",
     "export": "sapper export",

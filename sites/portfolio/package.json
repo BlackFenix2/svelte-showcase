@@ -4,6 +4,7 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
+    "lint": "stylelint **/*.svelte --fix && eslint . --ext .ts,.svelte --fix",
     "dev": "sapper dev",
     "build": "sapper build",
     "export": "sapper export",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "sapper": "^0.28.0",
-    "svelte": "^3.24.1"
+    "svelte": "^3.24.1",
+    "svelte-components": "*"
   }
 }

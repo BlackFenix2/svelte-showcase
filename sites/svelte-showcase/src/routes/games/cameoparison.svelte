@@ -60,10 +60,6 @@
   });
 </script>
 
-<style>
-
-</style>
-
 <SEO
   title="CameoParison"
   description="The Cameo comparison game"

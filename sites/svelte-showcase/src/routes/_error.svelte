@@ -12,9 +12,9 @@
   }
 
   h1 {
+    margin: 0 0 0.5em 0;
     font-size: 2.8em;
     font-weight: 700;
-    margin: 0 0 0.5em 0;
   }
 
   p {

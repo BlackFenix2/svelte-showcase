@@ -4,5 +4,9 @@
   "description": "A simple button with Storybook Stories",
   "license": "MIT",
   "private": true,
-  "main": "./src/index.ts"
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "svelte-toolbox": "^0.6.1"
+  }
 }

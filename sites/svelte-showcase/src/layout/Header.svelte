@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Nav from 'src/components/Nav.svelte';
+  import Nav from "src/components/Nav.svelte";
 </script>
 
 <header>

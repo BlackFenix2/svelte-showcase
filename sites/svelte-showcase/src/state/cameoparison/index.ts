@@ -19,7 +19,7 @@ function createCameoparison() {
     subscribe,
     cheatingDetected: () =>
       update((c) => {
-        var count = parseInt(localStorage.cheatCount) || 0;
+        const count = parseInt(localStorage.cheatCount) || 0;
 
         console.log('cheating count: ', count);
         localStorage.cheatCount = count + 1;

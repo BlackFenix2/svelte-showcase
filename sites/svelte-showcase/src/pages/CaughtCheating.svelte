@@ -1,10 +1,12 @@
 <script lang="ts">
-  import { Button, Container } from 'sveltestrap';
+  import { Button, Container } from "sveltestrap";
 
-  import { cameoparisonStore } from 'src/state/cameoparison';
+  import { cameoparisonStore } from "src/state/cameoparison";
 
   const restart = () => {
-    cameoparisonStore.reset();
+
+      cameoparisonStore.reset();
+
   };
 </script>
 

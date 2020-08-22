@@ -1,20 +1,35 @@
 import Button from './Button.svelte';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-export default { title: 'MyButton' };
-
-export const withText = () => ({
-  Component: Button,
-  props: {
-    text: text('Label', 'Hello Storybook'),
+export default {
+  title: 'MyButton',
+  argTypes: {
+    text: {
+      control: 'text',
+    },
+    rounded: {
+      control: 'boolean',
+    },
+    circle: {
+      control: 'boolean',
+    },
+    slot: {
+      control: 'object',
+    },
   },
   on: {
     click: action('I am logging in the actions tab too'),
   },
-});
-export const withEmoji = () => ({
+};
+
+const Template = (args) => ({
   Component: Button,
-  props: {
-    text: '😀 😎 👍 💯',
-  },
+  props: args,
 });
+
+export const withText = Template.bind({});
+withText.args = { text: 'Hello Storybook' };
+
+export const withEmoji = Template.bind({});
+withEmoji.args = {
+  text: '😀 😎 👍 💯',
+};

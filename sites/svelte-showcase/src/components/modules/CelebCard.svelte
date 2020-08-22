@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { Button } from 'sveltestrap';
-  import { createEventDispatcher, onMount, onDestroy } from 'svelte';
-  import { scale } from 'svelte/transition';
-  import { elasticOut } from 'svelte/easing';
+  import { Button } from "sveltestrap";
+  import { createEventDispatcher, onMount, onDestroy } from "svelte";
+  import { scale } from "svelte/transition";
+  import { elasticOut } from "svelte/easing";
+
   export let celeb;
 
   export let showPrice;
@@ -24,31 +25,31 @@
     border-radius: 5px;
   }
   .card-outer {
-    height: 100%;
-    width: 100%;
-    padding: 0 0 50% 0;
     position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 50% 0;
   }
 
   .card-inner {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
+    overflow: hidden;
     width: 100%;
     height: 100%;
+    padding: 0;
     background: 50% 50% no-repeat;
     background-position: 50% 0;
     background-size: cover;
-    overflow: hidden;
-    padding: 0;
-    text-align: left;
     border-radius: 5px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: left;
   }
   .details {
     position: absolute;
-    width: 100%;
     bottom: 0;
+    width: 100%;
     padding: 1em 0.5em 0.5em 0.5em;
     background: linear-gradient(
       to bottom,
@@ -60,23 +61,23 @@
   }
 
   .type {
-    margin: 0;
-    white-space: nowrap;
     overflow: hidden;
+    margin: 0;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .price {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
     font-size: 4em;
     font-weight: 700;
   }
@@ -98,7 +99,7 @@
     <button
       class="card-inner"
       style="background-image: url({celeb.image})"
-      on:click={() => dispatch('select')}>
+      on:click={() => dispatch( "select" )}>
       <div class="details">
         <h2>
           <a target="_blank" href="https://cameo.com/{celeb.id}">

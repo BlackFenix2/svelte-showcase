@@ -1,34 +1,32 @@
 <script lang="ts">
   import {
-    Collapse,
-    Nav,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-  } from 'sveltestrap';
+      Collapse,
+      Nav,
+      Navbar,
+      NavbarToggler,
+      NavbarBrand,
+      NavItem,
+      NavLink,
+      UncontrolledDropdown,
+      DropdownToggle,
+      DropdownMenu,
+      DropdownItem,
+  } from "sveltestrap";
 
   let isOpen = true;
 
-  const handleUpdate = (event) => {
-    isOpen = event.detail.isOpen;
+  const handleUpdate = event => {
+
+      isOpen = event.detail.isOpen;
+
   };
 </script>
-
-<style>
-
-</style>
 
 <Navbar color="light" light expand="md">
 
   <NavbarBrand href="/">svelte-showcase</NavbarBrand>
   <NavbarToggler
-    on:click={() => (isOpen = !isOpen)}
+    on:click={() => ( isOpen = ! isOpen )}
     aria-label="Navbar Toggler" />
 
   <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>

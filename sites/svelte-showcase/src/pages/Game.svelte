@@ -82,12 +82,12 @@
 
   .game {
     display: grid;
-    grid-template-rows: 1fr 2em 1fr;
-    grid-gap: 0.5em;
     width: 100%;
-    height: 100%;
     max-width: unquote('min(100%, 40vh)');
+    height: 100%;
     margin: 0 auto;
+    grid-gap: 0.5em;
+    grid-template-rows: 1fr 2em 1fr;
     > div {
       display: flex;
       align-items: center;
@@ -99,59 +99,59 @@
   }
   .giant-result {
     position: fixed;
+    top: calc(50vh - 25vmin);
+    left: calc(50vw - 25vmin);
     width: 50vmin;
     height: 50vmin;
-    left: calc(50vw - 25vmin);
-    top: calc(50vh - 25vmin);
     opacity: 0.5;
   }
 
   .overlay {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    z-index: 2000;
     top: 0;
     left: 0;
-    z-index: 2000;
+    width: 100%;
+    height: 100%;
   }
   .card-container {
     width: 100%;
     height: 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   .results {
     display: grid;
-    grid-gap: 0.2em;
     width: 100%;
     max-width: 320px;
     margin: 1em auto 0 auto;
+    grid-gap: 0.2em;
   }
   .result {
     position: relative;
+    padding: 0 0 100% 0;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    padding: 0 0 100% 0;
     transition: background 0.2s;
     transition-delay: 0.2s;
 
     img {
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
   .done {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -165,9 +165,9 @@
   @media (min-width: 640px) {
     .game {
       max-width: 100%;
-      grid-template-rows: none;
-      grid-template-columns: 1fr 8em 1fr;
       max-height: calc(100vh - 6em);
+      grid-template-columns: 1fr 8em 1fr;
+      grid-template-rows: none;
     }
   }
 </style>
