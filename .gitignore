@@ -6,3 +6,4 @@ cypress/screenshots/
 cypress/videos/
 __sapper__/
 public
+dist

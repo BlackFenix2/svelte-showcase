@@ -1,7 +1,6 @@
 <style>
   main {
     display: flex;
-    background-color: white;
   }
 
   aside {

@@ -1,8 +1,11 @@
-<script>
-  export let status;
-  export let error;
+<script lang="ts">
+import type { debug } from "svelte/internal";
 
-  const dev = process.env.NODE_ENV === "development";
+  export let status:string;
+  export let error: Error;
+
+  const dev = process.env.NODE_ENV === 'development';
+
 </script>
 
 <style>
@@ -31,7 +34,6 @@
 <svelte:head>
   <title>{status}</title>
 </svelte:head>
-
 <h1>{status}</h1>
 
 <p>{error.message}</p>

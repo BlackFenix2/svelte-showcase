@@ -19,7 +19,7 @@
     "sirv": "^1.0.6"
   },
   "devDependencies": {
-    "sapper": "^0.28.0",
+    "sapper": "^0.28.1",
     "svelte": "^3.24.1",
     "svelte-components": "*"
   }

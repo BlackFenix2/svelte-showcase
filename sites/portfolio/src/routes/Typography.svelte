@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
   import Icon from "svelte-components/src/Icon/Icon.svelte";
 </script>
 
@@ -20,7 +20,7 @@
     <p>Paragraph</p>
   </div>
   <div>
-    <Icon button class="fab fa-github" />
+    <Icon class="fab fa-github" />
     <Icon class="fab fa-github" />
     <Icon class="fab fa-github" />
 

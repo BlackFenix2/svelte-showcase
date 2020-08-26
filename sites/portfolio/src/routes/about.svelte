@@ -1,5 +1,5 @@
 <script>
-  import Button from 'svelte-components/src/Button/Button.svelte';
+        import {Button} from 'svelte-components';
 </script>
 
 <svelte:head>
