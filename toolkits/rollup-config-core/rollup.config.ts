@@ -8,14 +8,14 @@ import typescript from '@rollup/plugin-typescript';
 import autoPreprocess from 'svelte-preprocess';
 import alias from '@rollup/plugin-alias';
 import * as path from 'path';
-import type { RollupOptions } from 'rollup';
+import type { RollupOptions, WarningHandler, RollupWarning } from 'rollup';
 
 // Utilize process.cwd() instead of __dirname to get the working directory of the calling script rather rhan this file
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
-const onwarn = (warning, onwarn) =>
+const onwarn = (warning: RollupWarning, onwarn: WarningHandler): void | true =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
@@ -24,7 +24,7 @@ const onwarn = (warning, onwarn) =>
 
 const extensions = ['.mjs', '.js', '.json', '.node', '.ts', '.svelte'];
 
-const useTypescriptEntry = (string) => {
+const useTypescriptEntry = (string: string) => {
   return string.replace(/\.js$/, '.ts');
 };
 
@@ -45,15 +45,13 @@ const rollupConfig: RollupConfig = {
         ],
       }),
       replace({
-        // @ts-ignore
-        'process.browser': true,
+        'process.browser': JSON.stringify(true),
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
         dev,
         hydratable: true,
         emitCss: true,
-        // @ts-ignore
         preprocess: autoPreprocess(),
       }),
       resolve({
@@ -62,7 +60,7 @@ const rollupConfig: RollupConfig = {
         extensions: extensions,
       }),
       commonjs(),
-      typescript(),
+      typescript({ sourceMap: dev }),
 
       !dev &&
         terser({
@@ -84,15 +82,13 @@ const rollupConfig: RollupConfig = {
         ],
       }),
       replace({
-        // @ts-ignore
-        'process.browser': false,
+        'process.browser': JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
         generate: 'ssr',
         hydratable: true,
         dev,
-        // @ts-ignore
         preprocess: autoPreprocess(),
       }),
       resolve({
@@ -100,7 +96,7 @@ const rollupConfig: RollupConfig = {
         extensions: extensions,
       }),
       commonjs(),
-      typescript(),
+      typescript({ sourceMap: dev }),
     ],
 
     preserveEntrySignatures: 'strict',
@@ -113,12 +109,11 @@ const rollupConfig: RollupConfig = {
     plugins: [
       resolve(),
       replace({
-        // @ts-ignore
-        'process.browser': true,
+        'process.browser': JSON.stringify(true),
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       commonjs(),
-      typescript(),
+      typescript({ sourceMap: dev }),
 
       !dev && terser(),
     ],
