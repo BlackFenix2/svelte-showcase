@@ -1,5 +1,6 @@
-<script lang="typescript">
-  import { Header, Body, Footer } from "../layout";
+<script lang="ts">
+  import { Header, Body, Footer } from '../layout';
+
 </script>
 
 <style>
@@ -9,11 +10,13 @@
     height: 100%;
   }
 
-  :global(#sapper) {
+  /* gives parent div flex */
+  :global(#svelte) {
     display: flex;
     min-height: 100%;
     flex-direction: column;
   }
+
 </style>
 
 <template>

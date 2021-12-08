@@ -9,7 +9,7 @@
     "lint": "stylelint **/*.svelte --fix && eslint . --ext .ts,.svelte"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "svelte-toolbox": "^0.6.1"
   },
   "devDependencies": {

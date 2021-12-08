@@ -1,4 +1,16 @@
-<script lang="typescript">
+<script context="module">
+  /** @type {import('@sveltejs/kit').ErrorLoad} */
+  export function load({ error, status }) {
+    return {
+      props: {
+        status: status,
+        error: error,
+      },
+    };
+  }
+</script>
+
+<script lang="ts">
   export let status: string;
   export let error: Error;
 
@@ -34,8 +46,8 @@
 
 <h1>{status}</h1>
 
-<p>{error.message}</p>
+<p>{error?.message}</p>
 
-{#if dev && error.stack}
-  <pre>{error.stack}</pre>
+{#if dev && error?.stack}
+  <pre>{error?.stack}</pre>
 {/if}

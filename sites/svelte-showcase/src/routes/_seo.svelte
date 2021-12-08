@@ -1,7 +1,7 @@
 <script lang="ts">
   export let title: string = 'Svelte Showcase';
   export let description: string = "Ernie's web app trying out Svelte";
-  export let imgSrc: string;
+  export let imgSrc: string = '';
 </script>
 
 <svelte:head>

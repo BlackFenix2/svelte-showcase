@@ -3,8 +3,7 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules/*"],
   "compilerOptions": {
-    "types": ["svelte", "node", "@sapper"],
-    "typeRoots": ["typings"],
+    "types": ["svelte", "node"],
     "baseUrl": "."
   }
 }

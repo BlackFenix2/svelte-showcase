@@ -1,18 +1,17 @@
 import posts from './_posts';
 
-const contents = JSON.stringify(
-  posts.map((post) => {
-    return {
-      title: post.title,
-      slug: post.slug,
-    };
-  })
-);
+const contents = posts.map((post) => {
+  return {
+    title: post.title,
+    slug: post.slug,
+  };
+});
 
-export function get(req, res) {
-  res.writeHead(200, {
-    'Content-Type': 'application/json',
-  });
-
-  res.end(contents);
+/** @type {import('@sveltejs/kit').RequestHandler} */
+export async function get({ params }) {
+  return {
+    body: {
+      posts: contents,
+    },
+  };
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { fade } from "svelte/transition";
-  import { Container } from "sveltestrap";
-  import SEO from "./_seo.svelte";
+  import { fade } from 'svelte/transition';
+  import { Container } from 'sveltestrap';
+  import SEO from './_seo.svelte';
 </script>
 
 <style>

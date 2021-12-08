@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Button } from "sveltestrap";
-  import { createEventDispatcher, onMount, onDestroy } from "svelte";
-  import { scale } from "svelte/transition";
-  import { elasticOut } from "svelte/easing";
+  import { Button } from 'sveltestrap';
+  import { createEventDispatcher, onMount, onDestroy } from 'svelte';
+  import { scale } from 'svelte/transition';
+  import { elasticOut } from 'svelte/easing';
 
   export let celeb;
 
@@ -99,7 +99,7 @@
     <button
       class="card-inner"
       style="background-image: url({celeb.image})"
-      on:click={() => dispatch( "select" )}>
+      on:click={() => dispatch('select')}>
       <div class="details">
         <h2>
           <a target="_blank" href="https://cameo.com/{celeb.id}">

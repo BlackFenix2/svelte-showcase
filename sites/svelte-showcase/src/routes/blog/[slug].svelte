@@ -1,14 +1,21 @@
 <script context="module">
-  export async function preload({ params, query }) {
+  /** @type {import('@sveltejs/kit').Load} */
+  export async function load({ page, fetch, session, stuff }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await this.fetch(`blog/${params.slug}.json`);
-    const data = await res.json();
 
+    console.log('in svelte: ', page.params);
+    const res = await fetch(`blog/${page.params.slug}.json`);
+    console.log('Post List: ', res);
+    const { post } = await res.json();
+    console.log('Post List: ', post);
     if (res.status === 200) {
-      return { post: data };
+      return { props: post };
     }
-    this.error(res.status, data.message);
+    return {
+      status: res.status,
+      error: new Error(`Could not load ${url}`),
+    };
   }
 </script>
 
